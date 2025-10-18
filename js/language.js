@@ -4,7 +4,7 @@ const translations = {
     "nav-home": "Beranda",
     "nav-services": "Layanan",
     "nav-contact": "Kontak",
-    "hero-title": "Selamat Datang di Kantor Imigrasi Kelas I Denpasar",
+    "hero-title": "Selamat Datang di Kantor Imigrasi Kelas I TPI Denpasar (SATGAS PATROLI IMIGRASI)",
     "hero-subtitle": "Layanan Imigrasi Terpadu untuk Masyarakat Bali",
     "contact-title": "Hubungi Kami",
     "btn-satgas": "WA Satgas Patroli Imigrasi",
