@@ -22,6 +22,10 @@ body {
   line-height: 1.6;
 }
 
+body.modal-open {
+  overflow: hidden;
+}
+
 /* Header */
 .header {
   background: linear-gradient(135deg, var(--color-dark-blue) 0%, var(--color-medium-blue) 100%);
@@ -66,6 +70,7 @@ body {
 .nav {
   display: flex;
   gap: 2rem;
+  align-items: center;
 }
 
 .nav a {
@@ -77,6 +82,43 @@ body {
 
 .nav a:hover {
   opacity: 0.8;
+}
+
+/* Language Switcher */
+.language-switcher {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-left: 1rem;
+  padding-left: 1rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.lang-btn {
+  background: none;
+  border: none;
+  color: var(--color-white);
+  font-size: 0.9rem;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  transition: all 0.3s ease;
+  opacity: 0.6;
+}
+
+.lang-btn:hover {
+  opacity: 0.9;
+}
+
+.lang-btn.active {
+  opacity: 1;
+  font-weight: 700;
+}
+
+.lang-separator {
+  color: var(--color-white);
+  opacity: 0.6;
+  font-size: 0.9rem;
 }
 
 /* Added hamburger menu button styling */
@@ -560,6 +602,7 @@ body {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.5);
   animation: fadeIn 0.3s ease;
+  overflow-y: auto;
 }
 
 @keyframes fadeIn {
@@ -573,13 +616,14 @@ body {
 
 .modal-content {
   background-color: var(--color-white);
-  margin: 5% auto;
+  margin: 2rem auto;
   padding: 2rem;
   border-radius: 0.75rem;
   width: 90%;
   max-width: 500px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
   animation: slideIn 0.3s ease;
+  position: relative;
 }
 
 @keyframes slideIn {
