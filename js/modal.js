@@ -49,7 +49,16 @@ document.addEventListener("DOMContentLoaded", () => {
       const subject = document.getElementById("complaint-subject").value
       const message = document.getElementById("complaint-message").value
 
-      const whatsappMessage = `Halo, saya ingin melaporkan pengaduan ke Kantor Imigrasi Kelas I Denpasar.\n\nHello, I would like to report a complaint to the Immigration Office Class I Denpasar.\n\n*FORMAT LAPORAN PENGADUAN / COMPLAINT REPORT FORMAT*\n\nNama / Name: ${name}\nEmail: ${email}\nNomor Telepon / Phone Number: ${phone}\nSubjek / Subject: ${subject}\n\nIsi Pengaduan / Complaint Details:\n${message}`
+      // Get current language from localStorage
+      const currentLang = localStorage.getItem('language') || 'id'
+      
+      // Create message based on language
+      let whatsappMessage = ''
+      if (currentLang === 'id') {
+        whatsappMessage = `Halo, saya ingin melaporkan pengaduan ke Kantor Imigrasi Kelas I TPI Denpasar (SATGAS PATROLI IMIGRASI).\n\n*FORMAT LAPORAN PENGADUAN*\n\nNama: ${name}\nEmail: ${email}\nNomor Telepon: ${phone}\nSubjek: ${subject}\n\nIsi Pengaduan:\n${message}`
+      } else {
+        whatsappMessage = `Hello, I would like to report a complaint to the Immigration Office Class I TPI Denpasar (SATGAS PATROLI IMIGRASI).\n\n*COMPLAINT REPORT FORMAT*\n\nName: ${name}\nEmail: ${email}\nPhone Number: ${phone}\nSubject: ${subject}\n\nComplaint Details:\n${message}`
+      }
 
       const encodedMessage = encodeURIComponent(whatsappMessage)
       const whatsappNumber = WHATSAPP_CONFIG.complaint.number

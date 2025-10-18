@@ -17,7 +17,7 @@
                 <img src="https://batam.imigrasi.go.id/assets/resources/files/Panduan_Logo.png" alt="Logo Imigrasi" class="logo-img">
                 <div class="header-text">
                     <h1>Kantor Imigrasi</h1>
-                    <p>Kelas I Denpasar</p>
+                    <p>Kelas I TPI Denpasar (SATGAS PATROLI IMIGRASI)</p>
                 </div>
             </div>
             <!-- Added hamburger menu button for mobile -->
@@ -125,9 +125,10 @@
                     <h3 data-id="office-hours-title">Jam Operasional Kantor Imigrasi</h3>
                     <p data-id="office-hours-desc"><strong>Senin - Jumat:</strong> 08:00 - 16:00<br><strong>Sabtu - Minggu:</strong> Tutup</p>
                 </div>
-                <div class="card">
-                    <h3>Lokasi</h3>
-                    <p>Jl. Raya Puputan No. 1<br>Denpasar, Bali 80234</p>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-id="satgas-hours-title">Jam Operasional Satgas Patroli Bali</h3>
+                    <p data-id="satgas-hours-desc"><strong>24 Jam</strong><br>Setiap Hari</p>
                 </div>
             </div>
             <p class="office-description" data-id="office-desc">
@@ -151,10 +152,10 @@
     <div id="complaintModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeComplaintModal()">&times;</span>
-            <h2>Format Laporan Pengaduan / Complaint Report Form</h2>
+            <h2 data-id="modal-complaint-title">Format Laporan Pengaduan</h2>
             <form class="complaint-form" id="complaintForm">
                 <div class="form-group">
-                    <label for="complaint-name">Nama Lengkap / Full Name:</label>
+                    <label for="complaint-name" data-id="modal-label-name">Nama Lengkap:</label>
                     <input type="text" id="complaint-name" name="name" required>
                 </div>
                 <div class="form-group">
@@ -162,18 +163,18 @@
                     <input type="email" id="complaint-email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-phone">Nomor Telepon / Phone Number:</label>
+                    <label for="complaint-phone" data-id="modal-label-phone">Nomor Telepon:</label>
                     <input type="tel" id="complaint-phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-subject">Subjek Pengaduan / Subject:</label>
+                    <label for="complaint-subject" data-id="modal-label-subject">Subjek Pengaduan:</label>
                     <input type="text" id="complaint-subject" name="subject" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-message">Isi Pengaduan / Complaint Details:</label>
+                    <label for="complaint-message" data-id="modal-label-message">Isi Pengaduan:</label>
                     <textarea id="complaint-message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Kirim Pengaduan ke WhatsApp / Send to WhatsApp</button>
+                <button type="submit" class="btn btn-primary" data-id="modal-btn-submit">Kirim Pengaduan ke WhatsApp</button>
             </form>
         </div>
     </div>
@@ -182,17 +183,17 @@
     <div id="formatModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeFormatModal()">&times;</span>
-            <h2>Contoh Format Laporan Pengaduan / Complaint Report Format Example</h2>
+            <h2 data-id="modal-format-title">Contoh Format Laporan Pengaduan</h2>
             <div class="format-example">
-                <p><strong>FORMAT LAPORAN PENGADUAN / COMPLAINT REPORT FORMAT</strong></p>
-                <p style="margin-top: 1rem;">Nama / Name: [Nama Lengkap Anda / Your Full Name]</p>
-                <p>Email: [Email Anda / Your Email]</p>
-                <p>Nomor Telepon / Phone Number: [Nomor Telepon Anda / Your Phone Number]</p>
-                <p>Subjek / Subject: [Subjek Pengaduan / Complaint Subject]</p>
-                <p style="margin-top: 1rem;"><strong>Isi Pengaduan / Complaint Details:</strong></p>
-                <p>[Jelaskan secara detail pengaduan Anda dengan informasi yang lengkap dan jelas / Please explain your complaint in detail with complete and clear information]</p>
+                <p><strong data-id="modal-format-header">FORMAT LAPORAN PENGADUAN</strong></p>
+                <p style="margin-top: 1rem;" data-id="modal-format-name">Nama: [Nama Lengkap Anda]</p>
+                <p data-id="modal-format-email">Email: [Email Anda]</p>
+                <p data-id="modal-format-phone">Nomor Telepon: [Nomor Telepon Anda]</p>
+                <p data-id="modal-format-subject">Subjek: [Subjek Pengaduan]</p>
+                <p style="margin-top: 1rem;"><strong data-id="modal-format-details">Isi Pengaduan:</strong></p>
+                <p data-id="modal-format-desc">[Jelaskan secara detail pengaduan Anda dengan informasi yang lengkap dan jelas]</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    <em>Catatan / Note: Silakan isi format ini dan kirimkan melalui tombol "WA Satgas Patroli Imigrasi" untuk mengirimkan pengaduan Anda. / Please fill in this format and send it via the "WA Satgas Patroli Imigrasi" button to submit your complaint.</em>
+                    <em data-id="modal-format-note">Catatan: Silakan isi format ini dan kirimkan melalui tombol "WA Satgas Patroli Imigrasi" untuk mengirimkan pengaduan Anda.</em>
                 </p>
             </div>
         </div>
