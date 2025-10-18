@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kantor Imigrasi Kelas I Denpasar</title>
-    <link rel="icon" type="image/png" href="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Opo3qQ8KhX8tCiJw35W9N3zgdjsTb5.png">
+    <link rel="icon" type="image/png" href="https://batam.imigrasi.go.id/assets/resources/files/Panduan_Logo.png">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -14,7 +14,7 @@
     <header class="header">
         <div class="header-content">
             <div class="logo-section">
-                <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Opo3qQ8KhX8tCiJw35W9N3zgdjsTb5.png" alt="Logo Imigrasi" class="logo-img">
+                <img src="https://batam.imigrasi.go.id/assets/resources/files/Panduan_Logo.png" alt="Logo Imigrasi" class="logo-img">
                 <div class="header-text">
                     <h1>Kantor Imigrasi</h1>
                     <p>Kelas I Denpasar</p>
@@ -27,9 +27,14 @@
                 <span></span>
             </button>
             <nav class="nav" id="nav">
-                <a href="#beranda">Beranda</a>
-                <a href="#layanan">Layanan</a>
-                <a href="#kontak">Kontak</a>
+                <a href="#beranda" data-id="nav-home">Beranda</a>
+                <a href="#layanan" data-id="nav-services">Layanan</a>
+                <a href="#kontak" data-id="nav-contact">Kontak</a>
+                <div class="language-switcher">
+                    <button class="lang-btn active" data-lang="id">IND</button>
+                    <span class="lang-separator">/</span>
+                    <button class="lang-btn" data-lang="en">ENG</button>
+                </div>
             </nav>
         </div>
     </header>
@@ -37,73 +42,62 @@
     <!-- Hero Section -->
     <section class="hero">
         <div class="hero-content">
-            <h2>Selamat Datang di Kantor Imigrasi Kelas I Denpasar</h2>
-            <p>Layanan Imigrasi Terpadu untuk Masyarakat Bali</p>
+            <h2 data-id="hero-title">Selamat Datang di Kantor Imigrasi Kelas I Denpasar</h2>
+            <p data-id="hero-subtitle">Layanan Imigrasi Terpadu untuk Masyarakat Bali</p>
         </div>
     </section>
 
-    <!-- Add Office Information Section -->
-    <section class="office-info-section">
+    <!-- Hubungi Kami Section -->
+    <section class="contact-section" id="layanan">
         <div class="container">
-            <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-Opo3qQ8KhX8tCiJw35W9N3zgdjsTb5.png" alt="Logo Kantor Imigrasi" class="office-logo">
-            <h2>Kantor Imigrasi Kelas I Denpasar</h2>
-            <div class="office-info-grid">
-                <div class="info-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <h3>Lokasi</h3>
-                    <p>Jl. Raya Puputan No. 1<br>Denpasar, Bali 80234</p>
-                </div>
-                <div class="info-item">
-                    <i class="fas fa-clock"></i>
-                    <h3>Jam Operasional</h3>
-                    <p><strong>Senin - Jumat:</strong> 08:00 - 16:00<br><strong>Sabtu - Minggu:</strong> Tutup</p>
-                </div>
-                <div class="info-item">
+            <h2 data-id="contact-title">Hubungi Kami</h2>
+            <div class="buttons-grid">
+                <button class="btn btn-primary" onclick="openComplaintModal()">
                     <i class="fas fa-phone"></i>
-                    <h3>Kontak</h3>
-                    <p>Telepon: (0361) 227911<br>Email: denpasar@imigrasi.go.id</p>
-                </div>
+                    <span data-id="btn-satgas">WA Satgas Patroli Imigrasi</span>
+                </button>
+                <button class="btn btn-secondary" onclick="openFormatModal()">
+                    <i class="fas fa-file-alt"></i>
+                    <span data-id="btn-format">Format Laporan Pengaduan</span>
+                </button>
             </div>
-            <p class="office-description">
-                Kantor Imigrasi Kelas I Denpasar melayani kebutuhan imigrasi untuk wilayah Bali dengan profesional, transparan, dan akuntabel. Kami berkomitmen memberikan pelayanan terbaik kepada masyarakat.
-            </p>
         </div>
     </section>
 
     <!-- Add Complaint Procedure Section -->
     <section class="procedure-section">
         <div class="container">
-            <h2>Tata Cara Pengaduan</h2>
+            <h2 data-id="procedure-title">Tata Cara Pengaduan</h2>
             <div class="procedure-container">
                 <div class="procedure-steps">
                     <div class="step">
                         <div class="step-number">1</div>
-                        <h3>Persiapan</h3>
-                        <p>Siapkan data dan informasi lengkap tentang pengaduan Anda</p>
+                        <h3 data-id="step1-title">Persiapan</h3>
+                        <p data-id="step1-desc">Siapkan data dan informasi lengkap tentang pengaduan Anda</p>
                     </div>
                     <div class="step-arrow-right">
                         <i class="fas fa-arrow-right"></i>
                     </div>
                     <div class="step">
                         <div class="step-number">2</div>
-                        <h3>Isi Format</h3>
-                        <p>Isi format laporan pengaduan dengan detail yang jelas</p>
+                        <h3 data-id="step2-title">Isi Format</h3>
+                        <p data-id="step2-desc">Isi format laporan pengaduan dengan detail yang jelas</p>
                     </div>
                     <div class="step-arrow-down">
                         <i class="fas fa-arrow-down"></i>
                     </div>
                     <div class="step">
                         <div class="step-number">3</div>
-                        <h3>Kirim</h3>
-                        <p>Kirim laporan melalui WhatsApp ke nomor yang tersedia</p>
+                        <h3 data-id="step3-title">Kirim</h3>
+                        <p data-id="step3-desc">Kirim laporan melalui WhatsApp ke nomor yang tersedia</p>
                     </div>
                     <div class="step-arrow-left">
                         <i class="fas fa-arrow-left"></i>
                     </div>
                     <div class="step">
                         <div class="step-number">4</div>
-                        <h3>Verifikasi</h3>
-                        <p>Tim kami akan memverifikasi dan menindaklanjuti pengaduan Anda</p>
+                        <h3 data-id="step4-title">Verifikasi</h3>
+                        <p data-id="step4-desc">Tim kami akan memverifikasi dan menindaklanjuti pengaduan Anda</p>
                     </div>
                 </div>
                 <div class="procedure-officer">
@@ -115,53 +109,30 @@
 
     <!-- Main Content -->
     <main class="container">
-        <!-- Hubungi Kami Section -->
-        <section class="contact-section" id="layanan">
-            <h2>Hubungi Kami</h2>
-            <div class="buttons-grid">
-                <button class="btn btn-primary" onclick="openWhatsApp('satgas')">
-                    <i class="fas fa-phone"></i>
-                    WA Satgas Patroli Imigrasi
-                </button>
-                <button class="btn btn-primary" onclick="openComplaintModal()">
-                    <i class="fas fa-headset"></i>
-                    WA Layanan Pengaduan Kantor Imigrasi
-                </button>
-                <button class="btn btn-secondary" onclick="openFormatModal()">
-                    <i class="fas fa-file-alt"></i>
-                    Format Laporan Pengaduan
-                </button>
-            </div>
-        </section>
 
-<<<<<<< Updated upstream
-        <!-- Tentang Kami Section -->
-        <section class="about-section" id="beranda">
-            <h2>Tentang Kami</h2>
-            <div class="info-cards">
-                <div class="card">
-                    <h3>Kantor Imigrasi Kelas I Denpasar</h3>
-                    <p>Melayani kebutuhan imigrasi untuk wilayah Bali dengan profesional dan transparan.</p>
-                </div>
-                <div class="card">
-                    <h3>Jam Operasional</h3>
-                    <p><strong>Senin - Jumat:</strong> 08:00 - 16:00<br><strong>Sabtu - Minggu:</strong> Tutup</p>
-                </div>
-                <div class="card">
-                    <h3>Lokasi</h3>
-=======
         <!-- Office Information Section -->
         <section class="office-info-section" id="beranda">
             <img src="https://batam.imigrasi.go.id/assets/resources/files/Panduan_Logo.png" alt="Logo Kantor Imigrasi" class="office-logo">
-            <h2>Kantor Imigrasi Kelas I TPI Denpasar (SATGAS PATROLI IMIGRASI)</h2>
+            <h2>Kantor Imigrasi Kelas I Denpasar</h2>
             <div class="office-info-grid">
                 <div class="info-item">
                     <i class="fas fa-map-marker-alt"></i>
                     <h3 data-id="location-title">Lokasi</h3>
->>>>>>> Stashed changes
+                    <p>Jl. Raya Puputan No. 1<br>Denpasar, Bali 80234</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h3 data-id="office-hours-title">Jam Operasional Kantor Imigrasi</h3>
+                    <p data-id="office-hours-desc"><strong>Senin - Jumat:</strong> 08:00 - 16:00<br><strong>Sabtu - Minggu:</strong> Tutup</p>
+                </div>
+                <div class="card">
+                    <h3>Lokasi</h3>
                     <p>Jl. Raya Puputan No. 1<br>Denpasar, Bali 80234</p>
                 </div>
             </div>
+            <p class="office-description" data-id="office-desc">
+                Kantor Imigrasi Kelas I Denpasar melayani kebutuhan imigrasi untuk wilayah Bali dengan profesional, transparan, dan akuntabel. Kami berkomitmen memberikan pelayanan terbaik kepada masyarakat.
+            </p>
         </section>
 
         <!-- Legal Section -->
@@ -169,8 +140,8 @@
             <div class="legal-content">
                 <img src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/image-AexpG99PEcZ6GiNcgGiznxGaEOQTH1.png" alt="Officer" class="legal-officer-img">
                 <div class="legal-text">
-                    <h3>Peraturan Perundang-undangan</h3>
-                    <p>Berdasarkan UU NO 11 Tahun 2011 tentang Informasi dan Transaksi Elektronik, layanan ini menyediakan informasi resmi dari Kantor Imigrasi Kelas I Denpasar.</p>
+                    <h3 data-id="legal-title">Peraturan Perundang-undangan</h3>
+                    <p data-id="legal-desc">Berdasarkan UU NO 11 Tahun 2011 tentang Informasi dan Transaksi Elektronik, layanan ini menyediakan informasi resmi dari Kantor Imigrasi Kelas I Denpasar.</p>
                 </div>
             </div>
         </section>
@@ -180,10 +151,10 @@
     <div id="complaintModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeComplaintModal()">&times;</span>
-            <h2>Format Laporan Pengaduan</h2>
+            <h2>Format Laporan Pengaduan / Complaint Report Form</h2>
             <form class="complaint-form" id="complaintForm">
                 <div class="form-group">
-                    <label for="complaint-name">Nama Lengkap:</label>
+                    <label for="complaint-name">Nama Lengkap / Full Name:</label>
                     <input type="text" id="complaint-name" name="name" required>
                 </div>
                 <div class="form-group">
@@ -191,18 +162,18 @@
                     <input type="email" id="complaint-email" name="email" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-phone">Nomor Telepon:</label>
+                    <label for="complaint-phone">Nomor Telepon / Phone Number:</label>
                     <input type="tel" id="complaint-phone" name="phone" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-subject">Subjek Pengaduan:</label>
+                    <label for="complaint-subject">Subjek Pengaduan / Subject:</label>
                     <input type="text" id="complaint-subject" name="subject" required>
                 </div>
                 <div class="form-group">
-                    <label for="complaint-message">Isi Pengaduan:</label>
+                    <label for="complaint-message">Isi Pengaduan / Complaint Details:</label>
                     <textarea id="complaint-message" name="message" rows="5" required></textarea>
                 </div>
-                <button type="submit" class="btn btn-primary">Kirim Pengaduan ke WhatsApp</button>
+                <button type="submit" class="btn btn-primary">Kirim Pengaduan ke WhatsApp / Send to WhatsApp</button>
             </form>
         </div>
     </div>
@@ -211,17 +182,17 @@
     <div id="formatModal" class="modal">
         <div class="modal-content">
             <span class="close" onclick="closeFormatModal()">&times;</span>
-            <h2>Contoh Format Laporan Pengaduan</h2>
+            <h2>Contoh Format Laporan Pengaduan / Complaint Report Format Example</h2>
             <div class="format-example">
-                <p><strong>FORMAT LAPORAN PENGADUAN</strong></p>
-                <p style="margin-top: 1rem;">Nama: [Nama Lengkap Anda]</p>
-                <p>Email: [Email Anda]</p>
-                <p>Nomor Telepon: [Nomor Telepon Anda]</p>
-                <p>Subjek: [Subjek Pengaduan]</p>
-                <p style="margin-top: 1rem;"><strong>Isi Pengaduan:</strong></p>
-                <p>[Jelaskan secara detail pengaduan Anda dengan informasi yang lengkap dan jelas]</p>
+                <p><strong>FORMAT LAPORAN PENGADUAN / COMPLAINT REPORT FORMAT</strong></p>
+                <p style="margin-top: 1rem;">Nama / Name: [Nama Lengkap Anda / Your Full Name]</p>
+                <p>Email: [Email Anda / Your Email]</p>
+                <p>Nomor Telepon / Phone Number: [Nomor Telepon Anda / Your Phone Number]</p>
+                <p>Subjek / Subject: [Subjek Pengaduan / Complaint Subject]</p>
+                <p style="margin-top: 1rem;"><strong>Isi Pengaduan / Complaint Details:</strong></p>
+                <p>[Jelaskan secara detail pengaduan Anda dengan informasi yang lengkap dan jelas / Please explain your complaint in detail with complete and clear information]</p>
                 <p style="margin-top: 1rem; font-size: 0.9rem; color: #666;">
-                    <em>Catatan: Silakan isi format ini dan kirimkan melalui tombol "WA Layanan Pengaduan Kantor Imigrasi" untuk mengirimkan pengaduan Anda.</em>
+                    <em>Catatan / Note: Silakan isi format ini dan kirimkan melalui tombol "WA Satgas Patroli Imigrasi" untuk mengirimkan pengaduan Anda. / Please fill in this format and send it via the "WA Satgas Patroli Imigrasi" button to submit your complaint.</em>
                 </p>
             </div>
         </div>
@@ -234,6 +205,7 @@
 
     <script src="js/modal.js"></script>
     <script src="js/whatsapp.js"></script>
+    <script src="js/language.js"></script>
     <script src="js/script.js"></script>
 </body>
 </html>

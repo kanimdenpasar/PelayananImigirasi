@@ -39,6 +39,16 @@
     background: rgba(255, 255, 255, 0.1);
   }
 
+  .language-switcher {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0.5rem;
+  }
+
   .hero-content h2 {
     font-size: 1.8rem;
   }
@@ -130,6 +140,16 @@
     padding: 0.75rem 1rem;
     border-radius: 0.5rem;
     font-size: 0.9rem;
+  }
+
+  .language-switcher {
+    margin-left: 0;
+    padding-left: 0;
+    border-left: none;
+    padding: 0.75rem 1rem;
+    justify-content: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    margin-top: 0.5rem;
   }
 
   .hero {
